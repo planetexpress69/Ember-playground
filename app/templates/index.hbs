@@ -1,0 +1,19 @@
+Index<br>
+Foo: {{foo}}<br>
+Model: {{model}}<br>
+Iterate model:<br>
+<ul>
+{{#each model as |record|}}
+<li>{{record}}</li>
+{{/each}}
+</ul>
+<p class="{{className}}">theClassName: {{className}}</p><br>
+<button {{action "toggleColor"}}>Change color</button>
+<button class="{{buttonEnabled}}" {{action "fetchAjax"}}>Fetch</button><br>
+{{#if data}}
+{{#each data as |entry|}}
+<p>{{entry.title}}</p>
+{{/each}}
+{{/if}}
+
+{{outlet}}
